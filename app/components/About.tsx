@@ -10,7 +10,7 @@ const POINTS = [
 
 export default function About() {
   return (
-    <section id="about" className="px-5 py-20 sm:px-8 lg:px-16 lg:py-28">
+    <section id="about" className="px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
       <div className="mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div data-reveal className="reveal reveal-left relative mx-auto w-full lg:mx-0">
           <div className="img-zoom relative overflow-hidden rounded-[28px]">

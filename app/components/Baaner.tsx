@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bannerPhoto from "../images/banner.jpeg";
 import WhatsAppIcon from "./WhatsAppIcon";
+import Typewriter from "./Typewriter";
 
 const SOCIALS = [
   { label: "WhatsApp", href: "https://wa.me/6395382105", icon: WhatsAppIcon },
@@ -12,19 +13,16 @@ export default function Baaner() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden px-5 py-16 sm:px-8 lg:px-16 lg:py-24"
+      className="relative isolate overflow-hidden px-4 py-16 sm:px-8 lg:px-16 lg:py-24"
     >
       <div className="relative mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <div data-reveal className="reveal">
           <h1 className="text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl lg:text-[56px] lg:leading-[1.1]">
-            Hi, I&apos;m Sukhvinder Singh
+            Hi, I&apos;m <br></br> Sukhvinder Singh
           </h1>
 
-          <p className="mt-4 text-2xl font-semibold text-[var(--text)] sm:text-[28px]">
-            Frontend Developer
-          </p>
 
-          <p className="typewriter">REACT.JS</p>
+          <Typewriter />
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--muted)] sm:text-lg">
             I build responsive, user-friendly websites and modern web interfaces

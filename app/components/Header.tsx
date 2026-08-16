@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
@@ -49,17 +50,13 @@ export default function Header() {
   return (
     <>
     <header className="header-in sticky top-0 z-50 border-b border-[var(--header-border)] bg-[var(--header-bg)] backdrop-blur-xl">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/2 right-[18%] h-24 w-[420px] -translate-y-1/2 rounded-full blur-3xl bg-[var(--glow)]" />
-      </div>
-
-      <div className="relative z-10 mx-auto flex h-[72px] max-w-[1400px] items-center justify-between gap-4 px-5 sm:px-8">
+      <div className="relative z-10 mx-auto flex h-[72px] max-w-[1400px] items-center justify-between gap-4 px-4  sm:px-8 lg:px-16 ">
         <a
           href="#home"
           onClick={() => setActive("#home")}
-          className="shrink-0 text-[22px] font-semibold tracking-tight text-[#6ec8ff] dark:text-[#6ec8ff]"
+          className="inline-flex shrink-0 items-center rounded-md"
         >
-          SS.dev
+          <Logo className="h-12 sm:h-14 lg:h-16" priority />
         </a>
 
         <nav className="hidden items-center gap-7 xl:flex">
@@ -128,16 +125,16 @@ export default function Header() {
         }`}
         aria-hidden={!menuOpen}
       >
-        <div className="flex h-[72px] items-center justify-between border-b border-[var(--header-border)] px-5">
+        <div className="flex h-[72px] items-center justify-between border-b border-[var(--header-border)] px-4">
           <a
             href="#home"
             onClick={() => {
               setActive("#home");
               setMenuOpen(false);
             }}
-            className="text-[22px] font-semibold tracking-tight text-[#6ec8ff]"
+            className="inline-flex items-center rounded-md bg-black px-1.5 py-0.5 dark:bg-transparent"
           >
-            SS.dev
+            <Logo className="h-9" />
           </a>
           <button
             type="button"

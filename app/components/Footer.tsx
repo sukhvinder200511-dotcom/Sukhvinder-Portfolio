@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import WhatsAppIcon from "./WhatsAppIcon";
+import Logo from "./Logo";
 
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
@@ -46,18 +47,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative overflow-hidden border-t border-[var(--header-border)] px-5 py-16 sm:px-8 sm:py-20">
+    <footer className="relative overflow-hidden border-t border-[var(--header-border)] px-4 py-16 sm:px-8 sm:py-20">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/40 to-transparent" />
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-40 w-72 -translate-x-1/2 rounded-full bg-[var(--glow)] blur-3xl" />
 
       <div data-reveal className="reveal relative mx-auto flex max-w-[1400px] flex-col items-center text-center">
-        <a href="#home" className="group inline-flex items-center gap-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[var(--accent)] text-lg font-semibold text-[var(--accent)] shadow-[0_0_24px_color-mix(in_srgb,var(--accent)_35%,transparent)]">
-            SS
-          </span>
-          <span className="text-3xl font-bold tracking-[0.18em] text-[var(--accent)] sm:text-4xl">
-            SS.DEV
-          </span>
+        <a href="#home" className="inline-flex items-center rounded-lg ">
+          <Logo className="h-14 sm:h-16" />
         </a>
 
         <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm sm:gap-x-8">
@@ -107,7 +103,7 @@ export default function Footer() {
       <a
         href="#home"
         aria-label="Back to top"
-        className="absolute right-5 bottom-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--accent)] text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[#070b14] sm:right-8"
+        className="absolute right-4 bottom-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--accent)] text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[#070b14] sm:right-8"
       >
         <TopIcon />
       </a>

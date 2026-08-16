@@ -42,6 +42,7 @@ html,
 body {
   background: var(--bg);
   color: var(--text);
+  overflow-x: hidden;
 }
 
 html {
@@ -88,9 +89,9 @@ html:has(#theme-toggle:checked) .theme-light-label {
   display: block;
   margin-top: 0.75rem;
   min-height: 1.2em;
-  color: #7dd3fc;
-  font-size: clamp(1.75rem, 4.5vw, 3.5rem);
-  font-weight: 900;
+  color: var(--accent);
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  font-weight: 600;
   letter-spacing: normal;
   line-height: 1.2;
   white-space: nowrap;
@@ -166,7 +167,9 @@ html:has(#theme-toggle:checked) .marquee-band {
   .header-in,
   .orb-float,
   .orb-float-slow,
+  .corner-glow,
   .typewriter,
+  .typewriter-cursor,
   .site-loader-ring,
   .site-loader-ring-inner,
   .site-loader-core,
@@ -318,6 +321,33 @@ html.scroll-ready .reveal.is-visible {
   transition-delay: var(--delay, 0s);
 }
 
+.corner-glow {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  z-index: 0;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: var(--accent);
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: glowPulse 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.32;
+    transform: scale(1.08);
+  }
+}
+
 .orb-float {
   animation: orb-float 8s ease-in-out infinite;
 }
@@ -338,6 +368,19 @@ html.scroll-ready .reveal.is-visible {
 
 .typewriter {
   animation: type-glow 2.6s ease-in-out infinite;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 0.12em;
+  font-weight: 400;
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes type-glow {

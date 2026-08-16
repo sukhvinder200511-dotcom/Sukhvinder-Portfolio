@@ -19,7 +19,7 @@ const SCHOOLS = [
 
 export default function Education() {
   return (
-    <section id="education" className="relative overflow-hidden px-5 py-20 sm:px-8 lg:px-16 lg:py-28">
+    <section id="education" className="relative overflow-hidden px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
       <div className="pointer-events-none absolute top-24 left-[10%] h-64 w-64 rounded-full bg-[var(--glow)] blur-3xl" />
 
       <div className="relative mx-auto max-w-[1400px]">

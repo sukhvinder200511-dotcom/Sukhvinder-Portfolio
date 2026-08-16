@@ -49,7 +49,7 @@ const JOBS = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative overflow-hidden px-5 py-20 sm:px-8 lg:px-16 lg:py-28">
+    <section id="experience" className="relative overflow-hidden px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
       <div className="pointer-events-none absolute top-0 left-1/2 h-px w-[min(80%,720px)] -translate-x-1/2 bg-gradient-to-r from-transparent via-[var(--accent)]/40 to-transparent" />
       <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-[var(--glow)] blur-3xl" />
 

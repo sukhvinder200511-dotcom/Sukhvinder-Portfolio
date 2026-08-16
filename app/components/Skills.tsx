@@ -13,8 +13,8 @@ const SKILLS = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative overflow-hidden bg-[var(--skill-section)] px-5 py-20 sm:px-8 lg:px-16 lg:py-28">
-      <div className="pointer-events-none absolute -top-8 right-0 h-40 w-64 opacity-40">
+    <section id="skills" className="relative overflow-hidden bg-[var(--skill-section)] px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
+      <div className="pointer-events-none absolute top-10 right-0 h-40 w-64 opacity-40">
         <WaveDecor />
       </div>
       <div className="pointer-events-none absolute bottom-4 left-0 h-32 w-52 rotate-180 opacity-30">

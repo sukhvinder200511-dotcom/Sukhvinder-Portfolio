@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[var(--skill-section)] px-5 py-20 sm:px-8 lg:px-16 lg:py-28"
+      className="relative overflow-hidden bg-[var(--skill-section)] px-4 py-20 sm:px-8 lg:px-16 lg:py-28"
     >
       <div className="pointer-events-none absolute top-16 left-[8%] h-56 w-56 rounded-full bg-[var(--glow)] blur-3xl" />
       <div className="pointer-events-none absolute right-[6%] bottom-10 h-48 w-48 rounded-full bg-sky-400/10 blur-3xl" />

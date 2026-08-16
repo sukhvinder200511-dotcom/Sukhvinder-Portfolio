@@ -31,7 +31,7 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative overflow-hidden bg-[var(--skill-section)] px-5 py-20 sm:px-8 lg:px-16 lg:py-28">
+    <section id="projects" className="relative overflow-hidden bg-[var(--skill-section)] px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
       <div className="relative mx-auto max-w-[1400px]">
         <div data-reveal className="reveal">
           <p className="inline-flex rounded-full border border-[var(--accent)] px-4 py-1 text-xs font-semibold tracking-[0.18em] text-[var(--accent)]">
