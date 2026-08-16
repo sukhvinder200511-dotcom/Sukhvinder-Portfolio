@@ -1,49 +1,128 @@
-const EMAIL = "hello@ss.dev";
+const EMAIL = "sukhvinder200511@gmail.com";
+
+const CHANNELS = [
+  {
+    label: "Email",
+    value: EMAIL,
+    href: `mailto:${EMAIL}`,
+    note: "Best for project briefs",
+    icon: MailIcon,
+  },
+  {
+    label: "WhatsApp",
+    value: "+91 63953 82105",
+    href: "https://wa.me/6395382105",
+    note: "Quick questions & chats",
+    icon: WhatsAppIcon,
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    value: "Sukhvinder Singh",
+    href: "https://www.linkedin.com/in/sukhvinder-singh-03510b291?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    note: "Roles & collaborations",
+    icon: LinkedInIcon,
+    external: true,
+  },
+] as const;
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative isolate overflow-hidden px-5 py-28 sm:px-8 sm:py-36 lg:px-16 lg:py-44"
+      className="relative overflow-hidden bg-[var(--skill-section)] px-5 py-20 sm:px-8 lg:px-16 lg:py-28"
     >
-      <div className="pointer-events-none absolute -top-10 left-[8%] h-40 w-40 rounded-full bg-sky-400/20 blur-3xl orb-float" />
-      <div className="pointer-events-none absolute top-[18%] left-[28%] h-16 w-16 rounded-full bg-sky-300/25 blur-2xl orb-float-slow" />
-      <div className="pointer-events-none absolute top-1/2 right-[12%] h-56 w-56 -translate-y-1/2 rounded-full bg-[var(--glow)] blur-3xl orb-float" />
-      <div className="pointer-events-none absolute bottom-[18%] left-[18%] h-24 w-24 rounded-full bg-cyan-400/15 blur-3xl orb-float-slow" />
-      <div className="pointer-events-none absolute right-[30%] bottom-[22%] h-10 w-10 rounded-full bg-sky-200/20 blur-xl orb-float" />
+      <div className="pointer-events-none absolute top-16 left-[8%] h-56 w-56 rounded-full bg-[var(--glow)] blur-3xl" />
+      <div className="pointer-events-none absolute right-[6%] bottom-10 h-48 w-48 rounded-full bg-sky-400/10 blur-3xl" />
 
-      <div data-reveal className="reveal relative mx-auto flex min-h-[52vh] max-w-[1400px] flex-col justify-center">
-        <p className="text-sm font-medium text-[var(--text)] sm:text-base">
-          Want to start a project?
-        </p>
-
-        <div className="mt-4 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="water-heading max-w-[16ch] text-[clamp(2.8rem,9vw,7.5rem)] font-bold leading-[0.95] tracking-tight">
-            {["Let's", "have", "a", "chat"].map((word, index) => (
-              <span
-                key={word}
-                className="water-word"
-                style={{ ["--wave-delay" as string]: `${index * 0.18}s` }}
-              >
-                <span className="water-heading-outline">
-                  {word === "Let's" ? "Let\u2019s" : word}
-                </span>
-                <span className="water-heading-fill" aria-hidden="true">
-                  {word === "Let's" ? "Let\u2019s" : word}
-                </span>
+      <div className="relative mx-auto max-w-[1400px]">
+        <div
+          data-reveal
+          className="reveal overflow-hidden rounded-[32px] border border-[var(--header-border)] bg-[var(--skill-card)] p-7 sm:p-10 lg:p-14"
+        >
+          <div className="grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <div>
+              <span className="inline-flex rounded-full border border-[var(--accent)] px-4 py-1 text-xs font-semibold tracking-[0.18em] text-[var(--accent)]">
+                CONTACT
               </span>
-            ))}
-          </h2>
 
-          <a
-            href={`mailto:${EMAIL}`}
-            className="group inline-flex shrink-0 items-center gap-3 text-sm text-[var(--text)] sm:text-base"
-          >
-            {EMAIL}
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--text)] text-[var(--bg)] transition group-hover:bg-[var(--accent)] group-hover:text-[#070b14]">
-              <ArrowIcon />
-            </span>
-          </a>
+              <h2 className="mt-5 max-w-lg text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl lg:text-[42px] lg:leading-[1.15]">
+                Have a project in mind? Let&apos;s build it.
+              </h2>
+
+              <p className="mt-5 max-w-md text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
+                I&apos;m available for freelance work, frontend roles, and
+                collaborations — React, Next.js, WordPress, and Shopify
+                included. Send a note and I&apos;ll get back to you.
+              </p>
+
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--bg)] px-3.5 py-1.5 text-sm text-[var(--accent)] ring-1 ring-[var(--accent)]/20">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-40" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent)]" />
+                </span>
+                Open to new work
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="btn-pop inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold tracking-wide text-[#070b14] hover:brightness-110"
+                >
+                  Send an email
+                  <ArrowIcon />
+                </a>
+                <a
+                  href="https://wa.me/6395382105"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-pop inline-flex items-center rounded-xl border border-[var(--header-border)] px-5 py-3 text-sm font-semibold text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  Chat on WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <ul className="grid gap-4">
+              {CHANNELS.map((channel, index) => {
+                const Icon = channel.icon;
+
+                return (
+                  <li
+                    key={channel.label}
+                    data-reveal
+                    className="reveal"
+                    style={{ ["--delay" as string]: `${0.08 + index * 0.08}s` }}
+                  >
+                    <a
+                      href={channel.href}
+                      target={"external" in channel ? "_blank" : undefined}
+                      rel={"external" in channel ? "noreferrer" : undefined}
+                      className="group flex items-center gap-4 rounded-2xl border border-[var(--header-border)] bg-[var(--bg)] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]/40 hover:shadow-[0_14px_32px_color-mix(in_srgb,var(--accent)_12%,transparent)] sm:p-5"
+                    >
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--accent)]/12 text-[var(--accent)] transition group-hover:bg-[var(--accent)] group-hover:text-[#070b14]">
+                        <Icon />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-xs font-semibold tracking-[0.14em] text-[var(--accent)]">
+                          {channel.label}
+                        </span>
+                        <span className="mt-1 block truncate text-sm font-semibold text-[var(--text)] sm:text-base">
+                          {channel.value}
+                        </span>
+                        <span className="mt-0.5 block text-xs text-[var(--muted)]">
+                          {channel.note}
+                        </span>
+                      </span>
+                      <span className="hidden text-[var(--muted)] transition group-hover:text-[var(--accent)] sm:inline-flex">
+                        <ArrowIcon />
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -56,4 +135,24 @@ function ArrowIcon() {
       <path strokeLinecap="round" strokeLinejoin="round" d="M3 11 11 3m0 0H5.5M11 3v5.5" />
     </svg>
   );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 7.5 12 13l8-5.5M5.5 18h13A1.5 1.5 0 0 0 20 16.5v-9A1.5 1.5 0 0 0 18.5 6h-13A1.5 1.5 0 0 0 4 7.5v9A1.5 1.5 0 0 0 5.5 18Z" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
+      <path d="M20.5 3.5A11 11 0 0 0 2.1 17.4L1 23l5.8-1.1A11 11 0 0 0 20.5 3.5Zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.4.6.7-3.3-.2-.3A9.1 9.1 0 1 1 12 20.5Zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.8 1.1 3 1.9 3 4.6 4.1a15.7 15.7 0 0 0 1.6.6 3.8 3.8 0 0 0 1.8.1c.5-.1 1.6-.7 1.8-1.3s.2-1.2.2-1.3-.2-.2-.5-.3Z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon() {
+  return <span className="text-[15px] font-bold leading-none">in</span>;
 }

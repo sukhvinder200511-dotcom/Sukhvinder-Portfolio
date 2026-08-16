@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import ThemeProvider from "./components/ThemeProvider";
 import ScrollReveal from "./components/ScrollReveal";
 import Loader from "./components/Loader";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Header />
           {children}
           <Footer />
+          <WhatsAppFloat />
         </ThemeProvider>
       </body>
     </html>
