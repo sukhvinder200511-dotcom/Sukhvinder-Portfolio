@@ -1,5 +1,6 @@
 import Image from "next/image";
 import bannerPhoto from "../images/banner.jpeg";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const SOCIALS = [
   { label: "WhatsApp", href: "https://wa.me/6395382105", icon: WhatsAppIcon },
@@ -88,14 +89,6 @@ export default function Baaner() {
         </div>
       </div>
     </section>
-  );
-}
-
-function WhatsAppIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
-      <path d="M20.5 3.5A11 11 0 0 0 2.1 17.4L1 23l5.8-1.1A11 11 0 0 0 20.5 3.5Zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.4.6.7-3.3-.2-.3A9.1 9.1 0 1 1 12 20.5Zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.8 1.1 3 1.9 3 4.6 4.1a15.7 15.7 0 0 0 1.6.6 3.8 3.8 0 0 0 1.8.1c.5-.1 1.6-.7 1.8-1.3s.2-1.2.2-1.3-.2-.2-.5-.3Z" />
-    </svg>
   );
 }
 

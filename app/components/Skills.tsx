@@ -23,9 +23,6 @@ export default function Skills() {
 
       <div className="relative mx-auto max-w-[1400px]">
         <div data-reveal className="reveal mx-auto max-w-2xl text-center">
-          <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-[var(--accent)] text-[var(--accent)]">
-            <SkillMark />
-          </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl lg:text-[42px]">
             My Skills
           </h2>

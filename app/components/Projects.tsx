@@ -34,7 +34,7 @@ export default function Projects() {
     <section id="projects" className="relative overflow-hidden bg-[var(--skill-section)] px-5 py-20 sm:px-8 lg:px-16 lg:py-28">
       <div className="relative mx-auto max-w-[1400px]">
         <div data-reveal className="reveal">
-          <p className="text-sm font-semibold tracking-[0.22em] text-[var(--accent)]">
+          <p className="inline-flex rounded-full border border-[var(--accent)] px-4 py-1 text-xs font-semibold tracking-[0.18em] text-[var(--accent)]">
             PROJECTS
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl lg:text-[42px]">
