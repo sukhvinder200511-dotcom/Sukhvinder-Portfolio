@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
@@ -9,13 +13,37 @@ const NAV_LINKS = [
 ] as const;
 
 const SOCIALS = [
-  { label: "WhatsApp", href: "https://wa.me/", icon: WhatsAppIcon },
-  { label: "Instagram", href: "https://instagram.com/", icon: InstagramIcon },
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: LinkedInIcon },
-  { label: "GitHub", href: "https://github.com/", icon: GitHubIcon },
+  { label: "WhatsApp", href: "https://wa.me/6395382105", icon: WhatsAppIcon },
+  { label: "Instagram", href: "https://www.instagram.com/honey_ahluwalia_?igsh=MWd5aWwzandncXozcQ==", icon: InstagramIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sukhvinder-singh-03510b291?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: LinkedInIcon },
 ] as const;
 
 export default function Footer() {
+  const [active, setActive] = useState("#home");
+
+  useEffect(() => {
+    const ids = NAV_LINKS.map((link) => link.href.slice(1));
+
+    const onScroll = () => {
+      const offset = 150;
+      let current = "#home";
+
+      for (const id of ids) {
+        const section = document.getElementById(id);
+        if (!section) continue;
+        if (section.getBoundingClientRect().top - offset <= 0) {
+          current = `#${id}`;
+        }
+      }
+
+      setActive(current);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <footer className="relative overflow-hidden border-t border-[var(--header-border)] px-5 py-16 sm:px-8 sm:py-20">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/40 to-transparent" />
@@ -31,16 +59,28 @@ export default function Footer() {
           </span>
         </a>
 
-        <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)] sm:gap-x-8">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="transition hover:text-[var(--accent)]"
-            >
-              {link.label}
-            </a>
-          ))}
+        <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm sm:gap-x-8">
+          {NAV_LINKS.map((link) => {
+            const isActive = active === link.href;
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative transition ${
+                  isActive
+                    ? "text-[var(--accent)]"
+                    : "text-[var(--muted)] hover:text-[var(--accent)]"
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <span className="absolute -bottom-1.5 left-1/2 h-[2px] w-5 -translate-x-1/2 rounded-full bg-[var(--accent)]" />
+                )}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="mt-8 flex items-center gap-4">

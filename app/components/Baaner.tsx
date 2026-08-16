@@ -2,11 +2,10 @@ import Image from "next/image";
 import bannerPhoto from "../images/banner.jpeg";
 
 const SOCIALS = [
-  { label: "WhatsApp", href: "https://wa.me/", icon: WhatsAppIcon },
-  { label: "Instagram", href: "https://instagram.com/", icon: InstagramIcon },
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: LinkedInIcon },
-  { label: "GitHub", href: "https://github.com/", icon: GitHubIcon },
-];
+  { label: "WhatsApp", href: "https://wa.me/6395382105", icon: WhatsAppIcon },
+  { label: "Instagram", href: "https://www.instagram.com/honey_ahluwalia_?igsh=MWd5aWwzandncXozcQ==", icon: InstagramIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sukhvinder-singh-03510b291?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: LinkedInIcon },
+] as const;
 
 export default function Baaner() {
   return (
