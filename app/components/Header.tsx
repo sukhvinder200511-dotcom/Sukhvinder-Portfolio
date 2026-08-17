@@ -49,14 +49,14 @@ export default function Header() {
 
   return (
     <>
-    <header className="header-in sticky top-0 z-50 border-b border-[var(--header-border)] bg-[var(--header-bg)] backdrop-blur-xl">
+    <header className="header-in fixed inset-x-0 top-0 z-50 border-b border-[var(--header-border)] bg-[var(--header-bg)] backdrop-blur-xl">
       <div className="relative z-10 mx-auto flex h-[72px] max-w-[1400px] items-center justify-between gap-4 px-4  sm:px-8 lg:px-16 ">
         <a
           href="#home"
           onClick={() => setActive("#home")}
           className="inline-flex shrink-0 items-center rounded-md"
         >
-          <Logo className="h-12 sm:h-14 lg:h-16" priority />
+          <Logo className="h-10 max-w-[140px] sm:h-12 sm:max-w-none lg:h-14" priority />
         </a>
 
         <nav className="hidden items-center gap-7 xl:flex">

@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-[72px]">
       <Baaner />
       <Marquee />
       <About />

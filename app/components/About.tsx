@@ -18,7 +18,7 @@ export default function About() {
       <div className="relative mx-auto max-w-[1400px]">
         <div
           data-reveal
-          className="reveal overflow-hidden rounded-[32px] border border-[var(--header-border)] bg-[var(--skill-card)] p-5 sm:p-8 lg:p-10"
+          className="reveal rounded-[32px] border border-[var(--header-border)] bg-[var(--skill-card)] p-5 sm:p-8 lg:p-10"
         >
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
             <div className="relative mx-auto w-full max-w-[420px] lg:mx-0">

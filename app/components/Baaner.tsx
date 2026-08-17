@@ -13,7 +13,7 @@ export default function Baaner() {
   return (
     <section
       id="home"
-      className="relative isolate px-4 py-16 sm:px-8 lg:px-16 lg:py-24"
+      className="relative isolate overflow-x-hidden px-4 py-16 sm:px-8 lg:px-16 lg:py-24"
     >
       <div className="relative mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div data-reveal className="reveal">
@@ -26,7 +26,7 @@ export default function Baaner() {
             <span className="mt-1 block">Sukhvinder Singh</span>
           </h1>
 
-          <p className="mt-4 flex flex-wrap items-baseline gap-x-2 text-xl font-semibold sm:text-2xl">
+          <p className="mt-4 flex max-w-full flex-wrap items-baseline gap-x-2 text-xl font-semibold sm:text-2xl">
             <span className="text-[var(--muted)]">I build with</span>
             <Typewriter />
           </p>

@@ -40,7 +40,7 @@ export default function Contact() {
       <div className="relative mx-auto max-w-[1400px]">
         <div
           data-reveal
-          className="reveal overflow-hidden rounded-[32px] border border-[var(--header-border)] bg-[var(--skill-card)] p-7 sm:p-10 lg:p-14"
+          className="reveal rounded-[32px] border border-[var(--header-border)] bg-[var(--skill-card)] p-7 sm:p-10 lg:p-14"
         >
           <div className="grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
             <div>
