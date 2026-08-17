@@ -13,16 +13,23 @@ export default function Baaner() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden px-4 py-16 sm:px-8 lg:px-16 lg:py-24"
+      className="relative isolate px-4 py-16 sm:px-8 lg:px-16 lg:py-24"
     >
-      <div className="relative mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <div className="relative mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div data-reveal className="reveal">
-          <h1 className="text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl lg:text-[56px] lg:leading-[1.1]">
-            Hi, I&apos;m <br></br> Sukhvinder Singh
+          <span className="inline-flex rounded-full border border-[var(--accent)] px-4 py-1 text-xs font-semibold tracking-[0.18em] text-[var(--accent)]">
+            FRONTEND DEVELOPER
+          </span>
+
+          <h1 className="mt-5 text-4xl font-bold tracking-tight text-[var(--text)] sm:text-5xl lg:text-[56px] lg:leading-[1.08]">
+            Hi, I&apos;m
+            <span className="mt-1 block">Sukhvinder Singh</span>
           </h1>
 
-
-          <Typewriter />
+          <p className="mt-4 flex flex-wrap items-baseline gap-x-2 text-xl font-semibold sm:text-2xl">
+            <span className="text-[var(--muted)]">I build with</span>
+            <Typewriter />
+          </p>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--muted)] sm:text-lg">
             I build responsive, user-friendly websites and modern web interfaces
@@ -33,27 +40,26 @@ export default function Baaner() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
-              className="btn-pop inline-flex items-center rounded-xl bg-gradient-to-r from-[#2563eb] to-[#6ec8ff] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(56,189,248,0.35)] hover:brightness-110"
+              className="btn-pop inline-flex items-center rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold tracking-wide text-[#070b14] hover:brightness-110"
             >
               View My Work
             </a>
             <a
               href="/resume.pdf"
               download
-              className="btn-pop inline-flex items-center rounded-xl border border-black/15 bg-transparent px-5 py-3 text-sm font-semibold text-[var(--text)] hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10"
+              className="btn-pop inline-flex items-center rounded-xl border border-[var(--header-border)] px-5 py-3 text-sm font-semibold text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
               Download Resume
             </a>
             <a
               href="#contact"
-              className="btn-pop inline-flex items-center rounded-xl border border-black/15 bg-transparent px-5 py-3 text-sm font-semibold text-[var(--text)] hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10"
+              className="btn-pop inline-flex items-center rounded-xl border border-[var(--header-border)] px-5 py-3 text-sm font-semibold text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
               Contact Me
             </a>
           </div>
 
-
-          <div className="mt-6 flex items-center gap-4">
+          <div className="mt-7 flex items-center gap-3">
             {SOCIALS.map((social) => (
               <a
                 key={social.label}
@@ -69,9 +75,12 @@ export default function Baaner() {
           </div>
         </div>
 
-        <div data-reveal className="reveal reveal-right relative mx-auto w-full max-w-[420px]" style={{ ["--delay" as string]: "0.18s" }}>
-          <div className="absolute -bottom-6 left-6 right-6 h-32 rounded-full bg-sky-400/30 blur-3xl dark:bg-sky-400/40" />
-
+        <div
+          data-reveal
+          className="reveal reveal-right relative mx-auto w-full max-w-[440px] pb-6 lg:justify-self-end"
+          style={{ ["--delay" as string]: "0.18s" }}
+        >
+          <div className="absolute -bottom-2 left-8 right-8 h-24 rounded-full bg-sky-400/25 blur-3xl" />
           <div className="img-zoom relative overflow-hidden rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
             <div className="relative aspect-[4/5] w-full">
               <Image
@@ -80,7 +89,7 @@ export default function Baaner() {
                 fill
                 priority
                 className="object-cover object-[center_20%]"
-                sizes="(max-width: 1024px) 420px, 420px"
+                sizes="(max-width: 1024px) 420px, 440px"
               />
             </div>
           </div>
@@ -103,11 +112,3 @@ function InstagramIcon() {
 function LinkedInIcon() {
   return <span className="text-[15px] font-bold leading-none">in</span>;
 }
-function GitHubIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
-      <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.6s.8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1a3.6 3.6 0 0 1 .1 2.6 3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" />
-    </svg>
-  );
-}
-

@@ -103,7 +103,7 @@ export default function Footer() {
       <a
         href="#home"
         aria-label="Back to top"
-        className="absolute right-4 bottom-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--accent)] text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[#070b14] sm:right-8"
+        className="fixed right-5 bottom-6 z-50 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--accent)] bg-[var(--bg)] text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[#070b14] sm:right-8"
       >
         <TopIcon />
       </a>

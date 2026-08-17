@@ -42,11 +42,35 @@ html,
 body {
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--text) 28%, transparent) var(--bg);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text) 22%, transparent);
+  border: 2px solid var(--bg);
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+html::-webkit-scrollbar-corner {
+  background: var(--bg);
 }
 
 body {
@@ -86,12 +110,11 @@ html:has(#theme-toggle:checked) .theme-light-label {
 }
 
 .typewriter {
-  display: block;
-  margin-top: 0.75rem;
+  display: inline-block;
+  min-width: 11ch;
   min-height: 1.2em;
   color: var(--accent);
-  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: normal;
   line-height: 1.2;
   white-space: nowrap;

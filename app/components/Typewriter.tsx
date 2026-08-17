@@ -50,11 +50,11 @@ export default function Typewriter() {
   }, [text, deleting, index]);
 
   return (
-    <p className="typewriter" aria-live="polite">
+    <span className="typewriter" aria-live="polite">
       {text}
       <span className="typewriter-cursor" aria-hidden>
         |
       </span>
-    </p>
+    </span>
   );
 }
