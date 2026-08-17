@@ -1,79 +1,87 @@
 import Image from "next/image";
 import aboutPhoto from "../images/about.jpeg";
 
-const POINTS = [
-  "Frontend Roles",
-  "Responsive Design",
-  "WordPress & Shopify",
-  "UI Implementation",
+const TAGS = [
+  "React.js",
+  "Next.js",
+  "WordPress",
+  "Shopify",
+  "Responsive UI",
+  "Email Templates",
 ];
 
 export default function About() {
   return (
-    <section id="about" className="px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div data-reveal className="reveal reveal-left relative mx-auto w-full lg:mx-0">
-          <div className="img-zoom relative overflow-hidden rounded-[28px]">
-            <div className="relative aspect-[3/4] w-full">
-              <Image
-                src={aboutPhoto}
-                alt="Sukhvinder Singh"
-                fill
-                className="object-cover object-[center_18%]"
-                sizes="(max-width: 1024px) 460px, 420px"
-              />
+    <section id="about" className="relative overflow-hidden px-4 py-20 sm:px-8 lg:px-16 lg:py-28">
+      <div className="pointer-events-none absolute top-20 left-[8%] h-56 w-56 rounded-full bg-[var(--glow)] blur-3xl" />
+
+      <div className="relative mx-auto max-w-[1400px]">
+        <div
+          data-reveal
+          className="reveal overflow-hidden rounded-[32px] border border-[var(--header-border)] bg-[var(--skill-card)] p-5 sm:p-8 lg:p-10"
+        >
+          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+            <div className="relative mx-auto w-full max-w-[420px] lg:mx-0">
+              <div className="img-zoom relative overflow-hidden rounded-[24px]">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src={aboutPhoto}
+                    alt="Sukhvinder Singh"
+                    fill
+                    className="object-cover object-[center_18%]"
+                    sizes="(max-width: 1024px) 420px, 400px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <span className="inline-flex rounded-full border border-[var(--accent)] px-4 py-1 text-xs font-semibold tracking-[0.18em] text-[var(--accent)]">
+                ABOUT ME
+              </span>
+
+              <h2 className="mt-4 max-w-xl text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl lg:text-[40px] lg:leading-[1.15]">
+                Turning designs into clean, working interfaces
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
+                Frontend Developer in Saharanpur, currently at Terioat Infotech.
+                I build responsive sites with HTML, CSS, JavaScript, React.js, and
+                Next.js — converting designs into pixel-focused pages, customizing
+                WordPress with Elementor, and tailoring Shopify storefronts.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
+                I use Bootstrap and Tailwind CSS for reusable layouts, then fix UI,
+                cross-browser, and spacing issues so the interface holds up on
+                desktop, tablet, and mobile.
+              </p>
+
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {TAGS.map((tag) => (
+                  <li
+                    key={tag}
+                    className="rounded-full border border-[var(--header-border)] bg-[var(--bg)] px-3.5 py-1.5 text-xs font-semibold text-[var(--text)] sm:text-sm"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+
+              <blockquote className="mt-6 border-l-2 border-[var(--accent)] pl-4 text-sm leading-relaxed text-[var(--text)] sm:text-base">
+                A great frontend combines creativity with technical understanding
+                — and always puts the user first.
+              </blockquote>
+
+              <a
+                href="#contact"
+                className="btn-pop mt-8 inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold tracking-wide text-[#070b14] hover:brightness-110"
+              >
+                Let&apos;s Talk
+                <ArrowIcon />
+              </a>
             </div>
           </div>
-        </div>
-
-        <div data-reveal className="reveal" style={{ ["--delay" as string]: "0.12s" }}>
-          <span className="inline-flex rounded-full border border-[var(--accent)] px-4 py-1 text-xs font-semibold tracking-[0.18em] text-[var(--accent)]">
-            ABOUT ME
-          </span>
-
-          <h2 className="mt-5 max-w-xl text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl lg:text-[40px] lg:leading-[1.2]">
-            Turning designs into clean, working interfaces
-          </h2>
-
-          <p className="mt-5 text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
-            I&apos;m a Frontend Developer based in Saharanpur, Uttar Pradesh,
-            currently working at Terioat Infotech, where I build responsive,
-            user-friendly websites using HTML, CSS, JavaScript, React.js, and
-            Next.js. My work spans converting design concepts into pixel-focused,
-            responsive web pages, developing and customizing WordPress sites with
-            Elementor, and tailoring Shopify storefronts to client needs.
-          </p>
-
-          <p className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
-            Alongside React.js and Next.js, I use Bootstrap and Tailwind CSS to
-            build reusable, responsive UI components — and I spend a lot of time
-            fixing UI, cross-browser, and functionality issues so interfaces feel
-            solid on desktop, tablet, and mobile alike. I care about the details:
-            layout, spacing, and interactions that make a site feel considered.
-          </p>
-
-          <p className="mt-5 text-sm italic text-[var(--accent)] sm:text-base">
-            Note: &quot;I believe that a great frontend developer combines
-            creativity with technical understanding and always puts the user&apos;s
-            needs first.&quot;
-          </p>
-
-          <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {POINTS.map((point) => (
-              <li key={point} className="flex items-center gap-2.5 text-[var(--text)]">
-                <span className="h-2 w-2 shrink-0 bg-[var(--accent)]" />
-                {point}
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href="#contact"
-            className="btn-pop mt-8 inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold tracking-wide text-[#070b14] hover:brightness-110"
-          >
-            LETS TALK
-            <ArrowIcon />
-          </a>
         </div>
       </div>
     </section>

@@ -103,7 +103,6 @@ function InstagramIcon() {
 function LinkedInIcon() {
   return <span className="text-[15px] font-bold leading-none">in</span>;
 }
-
 function GitHubIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
@@ -111,3 +110,4 @@ function GitHubIcon() {
     </svg>
   );
 }
+
