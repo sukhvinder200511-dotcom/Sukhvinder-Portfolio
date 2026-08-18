@@ -1,7 +1,7 @@
 const JOBS = [
   {
     title: "Frontend Developer",
-    company: "Terioat Infotech",
+    company: "Terioat Infotech Pvt Ltd",
     badge: "Current",
     period: "Present",
     techs: ["React.js", "Next.js", "Tailwind", "Bootstrap", "WordPress", "Shopify"],
@@ -17,11 +17,11 @@ const JOBS = [
     ],
   },
   {
-    title: "Junior Developer",
-    company: "Stellen Infotech",
+    title: "Frontend Developer",
+    company: "Stellen Infotech Pvt Ltd",
     badge: "1 Year",
     period: "1 Year",
-    techs: ["React.js", "JavaScript", "Bootstrap", "WordPress", "HTML", "CSS"],
+    techs: ["React.js", "JavaScript", "Bootstrap","Material UI", "WordPress", "HTML", "CSS","Shopify"],
     points: [
       "Developed and maintained responsive websites and frontend interfaces.",
       "Worked with HTML, CSS, JavaScript, React.js, Bootstrap, and WordPress.",
@@ -33,10 +33,10 @@ const JOBS = [
   },
   {
     title: "Frontend Developer Intern",
-    company: "DOJ App",
+    company: "DOJ App Pvt Ltd",
     badge: "3 Months",
     period: "3 Months",
-    techs: ["HTML", "CSS", "JavaScript"],
+    techs: ["HTML", "CSS", "JavaScript," ,"React.js"],
     points: [
       "Gained practical experience in frontend web development in a professional environment.",
       "Worked with HTML, CSS, and JavaScript to build responsive web interfaces.",

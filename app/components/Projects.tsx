@@ -1,31 +1,31 @@
 const PROJECTS = [
   {
-    title: "Ecommerce Dashboard",
+    title: "Throwback Kitchen Website",
     description: "Built a responsive ecommerce dashboard interface with reusable frontend components.",
-    tech: "React.js",
+    tech: "WordPress, Elementor, HTML, CSS, JavaScript ",
     accent: "#38bdf8",
-    live: "#",
+    live: "https://throwbackkitchen.com/",
   },
   {
-    title: "Ecommerce Demo Website",
+    title: "Thewashbox Website",
     description: "Created a responsive ecommerce website interface with product-focused layouts.",
-    tech: "HTML, CSS, JavaScript",
+    tech: "Shopify, HTML, CSS, JavaScript",
     accent: "#fb923c",
-    live: "#",
+    live: "https://thewashbox.com/",
   },
   {
-    title: "YouTube Homepage Demo",
+    title: "Piece Uniquela Website",
     description: "Developed a responsive video-platform-inspired homepage and interactive UI.",
-    tech: "HTML, CSS, React.js",
+    tech: "WordPress, Elementor, HTML, CSS, JavaScript ,WooCommerce",
     accent: "#f87171",
-    live: "#",
+    live: "https://pieceuniquela.com/",
   },
   {
-    title: "Static Website",
+    title: "Btrac Website",
     description: "Built responsive website pages with clean layouts and interactive elements.",
-    tech: "HTML, CSS, JavaScript",
+    tech: "WordPress, Elementor, HTML, CSS, JavaScript ,WooCommerce" ,
     accent: "#4ade80",
-    live: "#",
+    live: "https://btrac.com/",
   },
 ] as const;
 

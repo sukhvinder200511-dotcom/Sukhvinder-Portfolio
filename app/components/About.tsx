@@ -45,7 +45,7 @@ export default function About() {
               </h2>
 
               <p className="mt-5 text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
-                Frontend Developer in Saharanpur, currently at Terioat Infotech.
+                Frontend Developer in Mohali Punjab, currently at Terioat Infotech.
                 I build responsive sites with HTML, CSS, JavaScript, React.js, and
                 Next.js — converting designs into pixel-focused pages, customizing
                 WordPress with Elementor, and tailoring Shopify storefronts.

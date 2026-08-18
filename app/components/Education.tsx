@@ -2,7 +2,7 @@ const SCHOOLS = [
   {
     level: "01",
     title: "Secondary Education",
-    place: "CIN School",
+    place: "Cambridge International School, Saharanpur, UP",
     years: "2021 — 2022",
     tag: "Foundation",
     note: "Completed secondary studies and built the base for a computer applications path.",
