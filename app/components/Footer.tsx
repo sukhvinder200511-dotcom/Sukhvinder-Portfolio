@@ -100,13 +100,13 @@ export default function Footer() {
         </p>
       </div>
 
-      <a
-        href="#home"
-        aria-label="Back to top"
-        className="fixed right-5 bottom-6 z-50 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--accent)] bg-[var(--bg)] text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[#070b14] sm:right-8"
-      >
-        <TopIcon />
-      </a>
+<a
+  href="#home"
+  aria-label="Back to top"
+  className="fixed left-5 bottom-6 z-50 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--accent)] bg-[var(--bg)] text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[#070b14] sm:left-8"
+>
+  <TopIcon />
+</a>
     </footer>
   );
 }

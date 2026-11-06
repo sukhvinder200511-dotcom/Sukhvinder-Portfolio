@@ -4,6 +4,7 @@ const SKILLS = [
   { name: "Bootstrap 5", src: "/icons/bootstrap.svg", color: "#7952B3" },
   { name: "JavaScript", src: "/icons/javascript.svg", color: "#F7DF1E" },
   { name: "React JS", src: "/icons/react.svg", color: "#61DAFB" },
+    { name: "Next.js", src: "/icons/Next.js.svg", color: "#000000" },
   { name: "Tailwind CSS", src: "/icons/tailwindcss.svg", color: "#38BDF8" },
   { name: "Material UI", src: "/icons/materialui.svg", color: "#007FFF" },
   { name: "WordPress", src: "/icons/wordpress.svg", color: "#21759B" },

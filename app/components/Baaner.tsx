@@ -45,11 +45,12 @@ export default function Baaner() {
               View My Work
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="/icons/Sukhvinder-singh.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-pop inline-flex items-center rounded-xl border border-[var(--header-border)] px-5 py-3 text-sm font-semibold text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
-              Download Resume
+              View Resume
             </a>
             <a
               href="#contact"
