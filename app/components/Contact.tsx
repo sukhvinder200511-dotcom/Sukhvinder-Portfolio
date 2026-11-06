@@ -53,8 +53,8 @@ export default function Contact() {
               </h2>
 
               <p className="mt-5 max-w-md text-base leading-relaxed text-[var(--muted)] sm:text-[17px]">
-                I&apos;m available for freelance work, frontend roles, and
-                collaborations — React, Next.js, WordPress, and Shopify
+                I&apos;m available for frontend roles, and
+                collaborations - React, Next.js, WordPress, and Shopify
                 included. Send a note and I&apos;ll get back to you.
               </p>
 
