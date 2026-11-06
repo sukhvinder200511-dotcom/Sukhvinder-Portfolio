@@ -132,7 +132,7 @@ export default function Header() {
               setActive("#home");
               setMenuOpen(false);
             }}
-            className="inline-flex items-center rounded-md bg-black px-1.5 py-0.5 dark:bg-transparent"
+            className="inline-flex items-center rounded-md  px-1.5 py-0.5 dark:bg-transparent"
           >
             <Logo className="h-9" />
           </a>
